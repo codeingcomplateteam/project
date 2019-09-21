@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
         <button class="navbar-toggle"
         type="button"
         data-toggle="collapse"
@@ -28,7 +28,21 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+<div class="navbar-header">
+  <div class="container">
+    <div class="row">
+      <div class="info-top col-md-6"> <i class="fa fa-phone"></i> 24/7 SUPPORT &nbsp; &nbsp; <a href="#">0800 123 4567</a> </div>
+      <div class="info-top col-md-6 text-right">
+        <ul>
+          <li><a href="#"><i class="fa fa-user"></i> Accont</a></li>
+          <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
+          <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Checkout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>

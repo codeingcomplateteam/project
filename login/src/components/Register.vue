@@ -18,7 +18,7 @@
                     </div>
                       <div class="form-group">
                     <label for="pws">Password</label>
-                    <input type="Password" v-model="Password" class="form-control" name="Password" placeholder="Please input Password">
+                    <input type="Password" v-model="password" class="form-control" name="Password" placeholder="Please input Password">
                     </div>
                       <button class="btn btn-lg btn-primary btn-block" type="submit">Singin</button>
                       <button class="btn btn-lg btn-danger btn-block" type="reset">cancel</button>
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+    import jwtDecode from 'jwt-decode'
     import axios from 'axios'
     import router from '../router'
     export default {
@@ -49,12 +50,16 @@
                     email: this.email,
                     password: this.password
                 }).then(res => {
-                    localStorage.setItem('usertoken', res.data)
+                    // localStorage.setItem('usertoken', res.data)
+                    // const token = localStorage.usertoken
+                    // const decode = jwtDecode(token)
+                    console.log(res.data)
                     this.lname = ''
                     this.fname = ''
                     this.email = ''
                     this.password = ''
-                    router.push({name: 'Login'})
+                     
+                    // router.push({name: 'Login'})
                 }).catch(err => {
                     console.log(err)
                 })
